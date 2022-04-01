@@ -1,0 +1,13 @@
+{shop_url}
+
+Hallo,
+
+{product} ist fast ausverkauft.
+
+Im Moment sind weniger als {last_qty} Stück an Lager.
+
+Verbleibender Lagerbestand: {qty}
+
+Replenish your inventory, go to the Catalog > Stocks section of your back office to manage your stock.                       Daniel
+
+[{shop_name}]({shop_url})

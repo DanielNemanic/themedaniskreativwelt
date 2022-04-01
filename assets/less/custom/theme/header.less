@@ -1,0 +1,36 @@
+@import '../uikit/navbar';
+@import "../uikit/offcanvas";
+
+header {
+  border-bottom: @line;
+  background-color: @global-emphasis-color;
+  .userbasket {
+
+    & > div {
+      padding: 10px;
+    }
+    a, a:hover, a:focus {
+      color: lighten(@navbar-nav-item-color,40%);
+    }
+  }
+
+  .logo {
+    height: 80px;
+  }
+
+  h2 {
+    color: #fbc2d9;
+    text-decoration: none;
+  }
+
+  #sideBarMenu {
+    & .logo {
+      width: 100%;
+      height: unset;
+    }
+  }
+}
+
+.hook-navbar(){
+  border-bottom: @line;
+}

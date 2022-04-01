@@ -1,0 +1,17 @@
+@base-body-background:      #eee;
+@base-body-color:           #8b8485;
+
+
+html {
+  /* 1 */
+  font-family: @base-body-font-family;
+  font-size: @base-body-font-size;
+  font-weight: @base-body-font-weight;
+  line-height: @base-body-line-height;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */
+  background: @base-body-background;
+  color: @base-body-color;
+  .hook-base-body;
+}

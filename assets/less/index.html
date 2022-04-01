@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Shop @ DanisKreativwelt</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../images/favicons/manifest.json">
+    <link rel="mask-icon" href="../images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+
+    <link rel="stylesheet/less" type="text/css" href="./custom/theme.less">
+    <script>less = { env: 'development'};</script>
+    <script src="./less.js" data-env="development"></script>
+    <script>//less.watch();</script>
+</head>
+<body>
+
+    <header>
+        <div class="userbasket">
+            <div class="uk-text-right">
+                <a href="#"> <span uk-icon="user"></span>Anmelden</a>
+                <a href="#"> <span uk-icon="cart"></span>Warenkorb <span class="uk-badge">0</span></a>
+            </div>
+        </div>
+        <nav class="uk-navbar-container uk-margin-small" uk-navbar>
+            <div class="uk-navbar-left">
+                <a class="uk-navbar-toggle" href="#offCanvas" uk-toggle uk-navbar-toggle-icon ></a>
+
+                <a href="#" class="uk-logo"><h2 class="daniskreativwelt">Daniskreativwelt</h2></a>
+            </div>
+            <div class="uk-margin-left uk-navbar-left uk-visible@s">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active">
+                        <a href="#" >Item</a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li class="uk-active"><a href="#">Active</a></li>
+                                <li class="uk-parent"><a href="#">Item</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="#">Item</a></li>
+                                        <li class="uk-parent"><a href="#">Item</a>
+                                            <ul class="uk-nav-sub">
+                                                <li><a href="#">Item</a></li>
+                                                <li class="uk-parent"><a href="#">Item</a>
+                                                    <ul class="uk-nav-sub">
+                                                        <li><a href="#">Item</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="uk-nav-header">Header</li>
+                                <li><a href="#">Item</a></li>
+                                <li><a href="#">Item</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li><a href="#">Item</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">Item</a>
+                        <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2">
+                            <div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
+                                <div>
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li class="uk-active"><a href="#">Active</a></li>
+                                        <li><a href="#">Item</a></li>
+                                        <li class="uk-nav-header">Header</li>
+                                        <li><a href="#">Item</a></li>
+                                        <li><a href="#">Item</a></li>
+                                        <li class="uk-nav-divider"></li>
+                                        <li><a href="#">Item</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                                        <li class="uk-active"><a href="#">Active</a></li>
+                                        <li><a href="#">Item</a></li>
+                                        <li class="uk-nav-header">Header</li>
+                                        <li><a href="#">Item</a></li>
+                                        <li><a href="#">Item</a></li>
+                                        <li class="uk-nav-divider"></li>
+                                        <li><a href="#">Item</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- This is the off-canvas -->
+        <div id="offCanvas" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar">
+
+                <ul class="uk-nav uk-nav-default">
+                    <li class="uk-active"><a href="#">Active</a></li>
+                    <li class="uk-parent">
+                        <a href="#">Parent</a>
+                        <ul class="uk-nav-sub">
+                            <li><a href="#">Sub item</a></li>
+                            <li><a href="#">Sub item</a></li>
+                            <li class="uk-parent"><a href="#">Item</a>
+                                <ul class="uk-nav-sub">
+                                    <li><a href="#">Item</a></li>
+                                </ul>
+                            </li>
+                            <li class="uk-parent"><a href="#">Item</a>
+                                <ul class="uk-nav-sub">
+                                    <li><a href="#">Item</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="uk-nav-header">Header</li>
+                    <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: table"></span> Item</a></li>
+                    <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: thumbnails"></span> Item</a></li>
+                    <li class="uk-nav-divider"></li>
+                    <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: trash"></span> Item</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Bilder Slider -->
+    <div class="uk-section uk-section-default" >
+
+        <div uk-slideshow="animation: push;min-height: 300; max-height: 600;autoplay: true">
+
+            <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+
+                <ul class="uk-slideshow-items">
+                    <li>
+                        <img data-src="../../../../img/p/1/1-large_default.jpg" alt="" uk-cover uk-img="target: !.uk-slideshow-items">
+                        <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                            <h3 class="uk-margin-remove">Bottom</h3>
+                            <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img data-src="../../../../img/p/1/1-large_default.jpg" alt="" uk-cover uk-img="target: !.uk-slideshow-items">
+                    </li>
+                    <li>
+                        <img data-src="../../../../img/p/1/1-large_default.jpg" alt="" uk-cover uk-img="target: !.uk-slideshow-items">
+                    </li>
+                </ul>
+
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+            </div>
+
+            <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+        </div>
+    </div>
+
+    <div class="uk-section uk-section-default" >
+        <div class="uk-container">
+            <div class="uk-child-width-1-4@m uk-margin" uk-grid uk-height-match="target: > div ">
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <div class="uk-card-badge uk-label">Neu</div>
+                            <img src="../../../../img/p/1/1-large_default.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Media Top</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="../../../../img/p/1/1-large_default.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Media Top</h3>
+                            <p>Lorem ipsum dolor sit amet, </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="../../../../img/p/1/1-large_default.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Media Top</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <img src="../../../../img/p/1/1-large_default.jpg" alt="">
+                        </div>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title">Media Top</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="uk-container uk-margin-top uk-margin-large-bottom">
+            <div class="uk-child-width-1-2" uk-grid>
+                <div>
+                    <h2>DanisKreativwelt</h2>
+                </div>
+                <div>
+                    Rechts
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="./node_modules/uikit/dist/js/uikit.js"></script>
+    <script type="text/javascript" src="./node_modules/uikit/dist/js/uikit-icons.js"></script>
+</body>
+</html>

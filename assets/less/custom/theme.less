@@ -1,0 +1,114 @@
+//Import UIKit Files
+@import "../node_modules/uikit/src/less/uikit.theme.less";
+
+//Import Theme Files
+@import "uikit/variables";
+@import "uikit/base";
+@import "uikit/inverse";
+@import "uikit/badge";
+@import "uikit/leader";
+@import "uikit/form";
+
+//Variablen
+@white: #f6f5ed; //#fff;
+@black: #000;
+@rosa: #fabec0;
+@line: 1px solid @rosa;
+@bggrey: #808184;
+@packColor: #027d0f;
+@discountColor: #bf7e02;
+
+@imageurl: "../node_modules/uikit/src";
+@internal-divider-icon-image: "@{imageurl}/images/backgrounds/divider-icon.svg";
+@internal-form-select-image: "@{imageurl}/images/backgrounds/form-select.svg";
+@internal-form-datalist-image: "@{imageurl}/images/backgrounds/form-datalist.svg";
+@internal-form-radio-image: "@{imageurl}/images/backgrounds/form-radio.svg";
+@internal-form-checkbox-image: "@{imageurl}/images/backgrounds/form-checkbox.svg";
+@internal-form-checkbox-indeterminate-image: "@{imageurl}/images/backgrounds/form-checkbox-indeterminate.svg";
+@internal-list-bullet-image: "@{imageurl}/images/backgrounds/list-bullet.svg";
+@internal-nav-parent-close-image: "@{imageurl}/images/backgrounds/nav-parent-close.svg";
+@internal-nav-parent-open-image: "@{imageurl}/images/backgrounds/nav-parent-open.svg";
+@internal-accordion-open-image: "@{imageurl}/images/backgrounds/accordion-open.svg";
+@internal-accordion-close-image: "@{imageurl}/images/backgrounds/accordion-close.svg";
+
+//Globale Einstellung
+@font-face {
+	font-family: "Quicksand";
+	src: url("/themes/themedaniskreativwelt/assets/fonts/Quicksand-Regular.ttf");
+}
+
+@font-face {
+	font-family: "League Script";
+	src: url("/themes/themedaniskreativwelt/assets/fonts/LeagueScript.ttf");
+}
+
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url("/themes/themedaniskreativwelt/assets/materialicons/MaterialIcons-Regular.eot"); /* For IE6-8 */
+	src: local('Material Icons'),
+	local('MaterialIcons-Regular'),
+	url("/themes/themedaniskreativwelt/assets/materialicons/MaterialIcons-Regular.woff2") format('woff2'),
+	url("/themes/themedaniskreativwelt/assets/materialicons/MaterialIcons-Regular.woff") format('woff'),
+	url("/themes/themedaniskreativwelt/assets/materialicons/MaterialIcons-Regular.ttf") format('truetype');
+}
+
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px; /* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+}
+
+.daniskreativwelt {
+	font-family: 'League Script', 'Quicksand', Arial, serif;
+	font-size: 2.20rem;
+	font-weight: 800;
+	background-color: #ffffff;
+	margin: 0;
+	color: @rosa;
+	width: auto;
+}
+
+.backgroundImageLogo {
+	background-image: url('/themes/themedaniskreativwelt/assets/images/logo2021/DanisKreativwelt_Header.png');
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.backgroundImageLogoHeight {
+	height: 60px;
+}
+
+.uk-button-daniskreativwelt {
+	background-color: @rosa;
+	color: @button-default-color;
+	border: @button-border-width solid @button-default-border;
+}
+
+.bright, .dark {
+	color: @white;
+}
+
+@import "theme/header";
+@import "theme/content";
+@import "theme/cart";
+@import "theme/customer";
+@import "theme/footer";

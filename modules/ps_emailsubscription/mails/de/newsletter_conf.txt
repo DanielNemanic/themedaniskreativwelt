@@ -1,0 +1,7 @@
+{shop_url}
+
+Hallo,
+
+Vielen Dank für Ihre Anmeldung zu unserem Newsletter.                       Daniel
+
+[{shop_name}]({shop_url})

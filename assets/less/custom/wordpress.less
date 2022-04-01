@@ -1,0 +1,232 @@
+// Import UIKit
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/wp-content/themes/daniskreativwelt/assets/fonts/Quicksand-Regular.ttf');
+}
+@font-face {
+  font-family: 'League Script';
+  src: url('/wp-content/themes/daniskreativwelt/assets/fonts/LeagueScript.ttf');
+}
+@import "../node_modules/uikit/src/less/uikit.theme.less";
+
+//Variables
+@imageurl:"../node_modules/uikit/src";
+
+@global-font-family: 'Quicksand', sans-serif;
+
+@global-color: #8b8485;
+@global-emphasis-color: #000000;
+@global-muted-color: #aba5a6;
+@white: #ffffff;
+@leader-fill-content: '.';
+
+@base-link-hover-text-decoration: none;
+// Header
+@header-bg-color: rgb(251, 194, 217);
+@mint: rgb(128,203,197);
+@grau: #f1f0f0;
+@header-darken: 5%;
+
+//.hook-base-body(){
+//  background-color:@grau;
+//}
+
+header {
+  font-family: 'League Script', 'Quicksand', Arial, serif;
+  font-size: 2.55rem;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: 0.08em;
+  @media only screen and (max-width: 500px) {
+    font-size: 1.7rem;
+  }
+  background-color:#ffffff;
+
+  a {
+    & ,&:link, &:hover, &:active, &:focus {
+      color: @header-bg-color;
+      text-decoration: none;
+    }
+  }
+  img {
+    max-width: 250px;
+  }
+}
+header.uk-section {margin-bottom: 0;}
+
+.uk-offcanvas-bar .offname {
+  &:extend(header);
+  font-size: 1.5em;
+  a {
+    & ,&:link, &:hover, &:active, &:focus {
+      &:extend(header a);
+    }
+  }
+}
+
+//Navbar
+//@navbar-background: rgba(248, 248, 248, 0.5);
+@navbar-background: @white;
+@navbar-dropdown-margin: 0;
+
+@navbar-nav-item-hover-color: @header-bg-color;
+@navbar-dropdown-nav-item-hover-color: darken( @header-bg-color, 15% );
+@navbar-nav-item-active-color: darken( @header-bg-color, 15% );
+.hook-navbar(){
+  border-top:1px solid @header-bg-color;
+}
+.hook-navbar-nav-item() {
+  .hook-button-text;
+}
+.hook-navbar-nav-item-hover(){
+  .hook-button-text-hover;
+}
+.hook-navbar-nav-item-active() {
+  .hook-navbar-nav-item-hover;
+  .hook-button-text-hover;
+}
+.uk-nav li.uk-active>a {
+  & ,&:link, &:hover, &:active, &:focus {
+    color: @header-bg-color;
+    text-decoration: none;
+  }
+}
+@navbar-dropdown-nav-item-hover-color: @header-bg-color;
+@navbar-dropdown-nav-item-active-color: darken( @header-bg-color, 15% );
+//Nav
+@nav-default-item-hover-color:  @header-bg-color;
+@nav-default-item-active-color: darken( @header-bg-color, 15% );
+@nav-default-item-active-color: @navbar-nav-item-hover-color;
+.uk-nav-default li {position: relative;}
+.hook-nav-default-item-active(){
+  padding-left:   @section-padding-inner;
+  padding-right:  @section-padding-inner;
+  .hook-navbar-nav-item-hover;
+}
+
+.hook-nav-default-item-hover(){
+  .hook-button-text-hover;
+}
+.hook-nav-default-item-active(){
+  .hook-navbar-nav-item-hover;
+  .hook-button-text-hover;
+}
+
+//OffCanvas
+@offcanvas-bar-background: #fff;
+@offcanvas-bar-color-mode: none;
+
+.main {
+  //background-color:#fff;
+  //border-right:1px solid @mint;
+  //border-left:1px solid @mint;
+  padding-left:0;
+  padding-right:0;
+}
+//Section
+@section-padding-inner: 20px;
+.hook-section(){
+  padding-left:   @section-padding-inner;
+  padding-right:  @section-padding-inner;
+  //margin-bottom: @section-padding-inner;
+}
+
+//.block {
+//  &:nth-child(even) {
+//    background: #f3f1f1;
+//  }
+//}
+.LeftSide ul.uk-nav>li {
+  margin: 10px 0;
+}
+.SubLink {
+  position:absolute;top:0;right:0;
+  padding:10px 15px;
+}
+
+.uk-article-title {
+  overflow: hidden;
+  &>* {
+    display: inline-block;
+    position: relative;
+  }
+  &>:after {
+    content: "";
+    position: absolute;
+    top: calc(50% - (1px / 2));
+    width: 2000px;
+    border-bottom: 1px solid #E5E5E5;
+    left: 100%;
+    margin-left: .6em;
+  }
+}
+
+.alignleft {
+  display: flex;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.alignright {
+  display: flex;
+  float: right;
+  margin-left: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.tagcloud>a, .widget_archive a, .widget_categories a {
+  & ,&:link, &:hover, &:active, &:focus {
+    color: @global-muted-color;
+    text-decoration: none;
+  }
+}
+
+/* Footer */
+.Footer {
+  background: @mint !important;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 1px;
+
+  a {
+    & ,&:link, &:hover, &:active, &:focus {
+      color: @grau;
+      text-decoration: none;
+    }
+  }
+
+  .header {
+    &:extend(header);
+    background-color: inherit;
+    text-transform: none;
+    a {
+      & ,&:link, &:hover, &:active, &:focus {
+        color: @header-bg-color;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.widget_categories, .widget_archive {
+  & a {
+    display:inline !important;;
+  }
+}
+
+//Login
+.tx-felogin-pi1 {
+  .uk-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

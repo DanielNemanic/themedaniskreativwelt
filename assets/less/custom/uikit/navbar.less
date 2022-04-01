@@ -1,0 +1,27 @@
+@navbar-background:                     @global-background;
+@navbar-dropdown-margin:                0;
+@subnav-font-weight:                    bold;
+@navbar-nav-item-hover-color:           darken(@navbar-nav-item-color, 15%);
+
+.hook-navbar-nav-item() {
+  .hook-button-text;
+}
+.hook-navbar-nav-item-hover(){
+  .hook-button-text-hover;
+}
+.hook-navbar-nav-item-active() {
+  .hook-navbar-nav-item-hover;
+  .hook-button-text-hover;
+}
+
+.uk-navbar-dropdown-nav .uk-nav-sub li.uk-active > a,
+.uk-nav-default .uk-nav-sub li.uk-active > a
+{ color: @navbar-dropdown-nav-sublist-item-active-color; font-weight: @subnav-font-weight; }
+
+.hook-navbar-dropdown-nav-item-active(){
+  font-weight: @subnav-font-weight;
+}
+
+.hook-navbar-sticky(){
+  background-color: @bggrey;
+}
